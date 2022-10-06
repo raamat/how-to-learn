@@ -325,9 +325,6 @@
   min-height: 250px;
 }
 
-.footer__column_content_info {
-}
-
 .footer__column-heading {
   line-height: 30px;
   font-size: 18px;
@@ -349,9 +346,6 @@
 .footer__column-link {
   text-decoration: none;
   color: white;
-}
-
-.footer__column_content_social {
 }
 
 .footer__social-icon {
