@@ -15,9 +15,9 @@
   max-height: 756px;
   /* выше установили ограничения для секции */
   /* Ниже выставил position: relative, чтобы элементы позиционировались относительно heder, а на body*/
+  /* не влияет на позицию блока, если не указано смещение */
   position: relative;
   /* Ниже для формирования контекста наложения см. справку https://doka.guide/css/stacking-context */
-  border: 2px solid rgb(68, 0, 255);
   display: flex;
   align-items: center;
   background-color: #f2f2f2;
@@ -34,26 +34,23 @@
   background-color: #2f80ed;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
-.logo_place_header {
-  /*display: flex;*/
-  position: absolute;
+/*Микс для общих правил. Тема "Способы модификации блоков"*/
+/*Общие стили для logo_place_header и logo_place_footer*/
+.logo {
   width: 228px;
   height: 32px;
-  left: 64px;
-  top: 30px;
-  background-image: url(../images/logo_place_header.svg);
   /*Чтобы логотип помещался в блок*/
   background-size: cover;
   z-index: 1;
 }
+
+
+.logo_place_header {
+  position: absolute;
+  left: 64px;
+  top: 30px;
+  background-image: url(../images/logo_place_header.svg);
+ }
 
 .header__title {
   width: 730px;
@@ -84,7 +81,7 @@
 }
 
 .header__main-illustration {
-  width: 758px;
+  width: 765px;
   height: 608px;
   position: absolute;
   right: 0;
@@ -95,7 +92,6 @@
 /****************************** description ***************************************/
 .description {
   padding-top: 100px;
-  border: 2px solid rgb(255, 0, 0);
 }
 
 .two-columns {
@@ -113,6 +109,7 @@
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  margin: 0;
 }
 
 .two-columns__main-text {
@@ -123,14 +120,33 @@
   font-weight: normal;
 }
 
+/*Убираем отступ после последнего абзаца за счет псевдокласса*/
+/*last-of-type находит последнего потомка с заданным тегом*/
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.two-columns__paragraph {
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+/*Делаем слово "Вывод" полужирным*/
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 /******************************  digits ***************************************/
 .digits {
-  border: 2px solid rgb(15, 139, 4);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-title {
   width: 60%;
-  padding-top: 100px;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
@@ -141,6 +157,8 @@
 }
 
 .section-subtitle {
+  margin: 0;
+  padding-top: 20px;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
@@ -148,20 +166,17 @@
 }
 
 .table {
-  border: 2px solid rgb(245, 11, 3);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1100px;
   margin: 0 auto;
   padding-top: 60px;
-  padding-bottom: 100px;
   /*Растояние по вертикали между рядами блоков*/
   row-gap: 60px;
 }
 
 .table__cell {
-  border: 2px solid rgb(15, 139, 4);
   width: 250px;
 }
 
@@ -169,7 +184,6 @@
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  padding-bottom: 20px;
   margin: 0;
 }
 
@@ -178,17 +192,16 @@
   font-size: 18px;
   font-weight: normal;
   margin: 0;
-  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 /******************************  feynman ***************************************/
 .feynman {
-  border: 2px solid rgb(35, 88, 202);
   height: 890px;
   position: relative;
   padding-top: 100px;
   background-color: #f2f2f2;
-  z-index: -2;
+  z-index: 0;
 }
 
 .feynman__title {
@@ -222,9 +235,127 @@
 
 .feynman__background {
   width: 867px;
-  height: 637;
+  height: 637px;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -1;
+}
+
+/****************************** kaufman ***************************************/
+.kaufman {
+  background-color: #1f1f1f;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  position: relative;
+  z-index: -2;
+  /*Для обрезки фонового изображения*/
+  overflow: hidden;
+}
+
+.section-title_theme_dark {
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+}
+
+/* элемент с модификатором вида ключ-значение */
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+}
+
+.kaufman__triangle {
+  width: 877px;
+  height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  position: absolute;
+  top: 0;
+  right: -210px;
+  z-index: -1;
+}
+
+/****************************** footer ***************************************/
+.footer {
+  min-height: 350px;
+  /*Ниже показываем браузеру, что высота 350px относится к элементу полностью, включая padding*/
+  /*В противном случае футер будет 450px за счет верхнего и нижнего отступа*/
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.footer__columns {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  /*Распределяем элемменты по горизонтали с равными промежутками*/
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.footer__column_content_copyright {
+  flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_plase_footer {
+  background-image: url(../images/logo_place_footer.svg);
+}
+
+.footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/*В брифе об элементе footer__column явным образом не сказано, но 
+задавать к классах только модификатор по БЭМ недопустимо*/
+.footer__column {
+  /*Минимальная высота футера 350px минус отступы сверху (60px) и снузу (40px)*/ 
+  min-height: 250px;
+}
+
+.footer__column_content_info {
+}
+
+.footer__column-heading {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0; 
+  padding-bottom: 20px; 
+}
+
+.footer__column-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  padding-bottom: 16px;
+}
+
+.footer__column-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__column_content_social {
+}
+
+.footer__social-icon {
+  padding-right: 10px;
+  width: 16px;
+  height: 16px;
 }
