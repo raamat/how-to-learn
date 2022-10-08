@@ -53,7 +53,8 @@
  }
 
 .header__title {
-  width: 730px;
+  margin: 0;
+  max-width: 730px;
   padding-left: 64px;
   line-height: 96px;
   font-size: 102px;
@@ -62,8 +63,9 @@
 }
 
 .header__subtitle {
+  margin: 0;
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   left: 64px;
   bottom: 30px;
   text-align: left;
@@ -78,6 +80,7 @@
   font-size: 18px;
   font-weight: normal;
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -100,7 +103,6 @@
   width: 80%;
   /*Чтобы центрировать элемент по горизонтали внутри своего родителя*/
   margin: 0 auto;
-  min-height: 150px;
 }
 
 .two-columns__brief {
@@ -157,7 +159,8 @@
 }
 
 .section-subtitle {
-  margin: 0;
+  margin: 0 auto;
+  width: 60%;
   padding-top: 20px;
   text-align: center;
   line-height: 34px;
@@ -197,8 +200,9 @@
 
 /******************************  feynman ***************************************/
 .feynman {
-  height: 890px;
+  min-height: 890px;
   position: relative;
+  box-sizing: border-box;
   padding-top: 100px;
   background-color: #f2f2f2;
   z-index: 0;
@@ -248,7 +252,7 @@
   padding-top: 90px;
   padding-bottom: 90px;
   position: relative;
-  z-index: -2;
+  z-index: 1;
   /*Для обрезки фонового изображения*/
   overflow: hidden;
 }
@@ -261,18 +265,25 @@
   color: white;
 }
 
+/*Модификатор для таблицы с темным фоном - перекрывает отступы по 60px для светлой таблицы*/
+.table_theme_dark {
+  padding-top: 80px;
+  row-gap: 80px;
+}
+
 /* элемент с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
-  margin-top: 80px;
 }
 
 .kaufman__triangle {
   width: 877px;
   height: 877px;
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   right: -210px;
@@ -281,6 +292,7 @@
 
 /****************************** footer ***************************************/
 .footer {
+  display: flex;
   min-height: 350px;
   /*Ниже показываем браузеру, что высота 350px относится к элементу полностью, включая padding*/
   /*В противном случае футер будет 450px за счет верхнего и нижнего отступа*/
@@ -316,13 +328,6 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-}
-
-/*В брифе об элементе footer__column явным образом не сказано, но 
-задавать к классах только модификатор по БЭМ недопустимо*/
-.footer__column {
-  /*Минимальная высота футера 350px минус отступы сверху (60px) и снузу (40px)*/ 
-  min-height: 250px;
 }
 
 .footer__column-heading {
