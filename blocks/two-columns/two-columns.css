@@ -1,0 +1,7 @@
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  /*Чтобы центрировать элемент по горизонтали внутри своего родителя*/
+  margin: 0 auto;
+}

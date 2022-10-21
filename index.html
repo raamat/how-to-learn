@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Научиться учиться</title>
-  <link rel="stylesheet" href="./styles/normalize.css">
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body>
   <div class="page">
@@ -14,10 +13,10 @@
       <h1 class="header__title">Научиться учиться</h1> 
       <p class="header__subtitle">
         Какие современные и эффективные подходы к обучению вы можете использовать в своей жизни?
-        <a class="header__link" href="#" target="_blank"> Узнать &rarr;</a>
+        <a class="header__link opacity" href="#" target="_blank"> Узнать &rarr;</a>
       </p> 
       <img class="header__main-illustration" src="./images/header-image.png" alt="Фрагмент картины Опять двойка">
-      <div class="header__square-pic"></div>
+      <div class="header__square-pic rotation"></div>
     </header>
     <main class="content">
       <section class="description">
@@ -37,6 +36,68 @@
           </div>
         </article>
       </section>
+      <section class="techniques">
+        <h2 class="section-title">Техники обучения</h2>
+        <p class="section-subtitle">Пять практик от Барбары Оакли</p>
+        <div class="cards">
+          <div class="cards__item">
+            <img class="cards__image" src="./images/cards-attention.png" alt="Книга Брианны Уист по самопомощи. Иллюстрация">
+            <h3 class="cards__title">Два вида внимания</h3>
+            <p class="cards__description">Глубокие знания возникают, если чередовать сфокусированное и рассеяное мышление.</p>
+          </div>
+          <div class="cards__item">
+            <img class="cards__image" src="./images/cards-recall.png" alt="Скульптура задумавшегося мальчика. Иллюстрация">
+            <h3 class="cards__title">Recall</h3>
+            <p class="cards__description">Вспоминайте изученное — это позволит соединить разрозненные порции памяти.</p>
+          </div>
+          <div class="cards__item">
+            <img class="cards__image" src="./images/cards-interliving.png" alt="Скопление людей на вокзале. Иллюстрация">
+            <h3 class="cards__title">Интерливинг</h3>
+            <p class="cards__description">Изучайте несколько навыков одновременно, они обогащают друг друга.</p>
+          </div>
+          <div class="cards__item">
+            <img class="cards__image" src="./images/cards-question.png" alt="Одинокий человек в огромной публичной библиотеке. Иллюстрация">
+            <h3 class="cards__title">Вопросы</h3>
+            <p class="cards__description">Слушая преподавателя, придумывайте хороший вопрос, который вас действительно волнует.</p>
+          </div>
+          <div class="cards__item">
+            <img class="cards__image" src="./images/cards-competence.png" alt="Стопка книг. Иллюстрация">
+            <h3 class="cards__title">Иллюзия компетентности</h3>
+            <p class="cards__description">Повторите про себя, запишите, расскажите другу: вам только кажется, что вы владеете новой темой.</p>
+          </div>
+        </div>
+      </section>
+      <section class="video">
+        <h2 class="section-title">Видео на TED</h2>
+        <p class="section-subtitle">Для тех, кто любит прокрастинировать</p>
+        <div class="video__iframes">
+          <div class="video__iframe">
+            <iframe width="515" height="316" src="https://www.youtube.com/embed/J_89IMS5gJQ" title="TED Джош Кауфман — как за 20 часов научиться чему угодно." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video__iframe">
+            <iframe width="515" height="316" src="https://www.youtube.com/embed/0u3bccaRmmg" title="Тим Урбан — Что происходит в голове у закоренелого прокрастинатора" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div> 
+      </section>
+      <section class="oakley">
+        <article class="two-columns">
+          <h2 class="two-columns__brief">История Барбары Оакли.</h2>
+          <div class="two-columns__main-text">
+            <p class="two-columns__paragraph">
+              С детства Барбаре не давалась математика. Она считала себя законченным гуманитарием, причём далеко не самым умным. 
+              В армии она изучала русский язык, чтобы получить надбавку, да так успешно, что её выдвинули в командиры. 
+              Но для продвижения по службе нужно было сдавать математику. И тогда Барбара придумала свой подход к точным наукам. 
+              Оказалось, если вам что-то «плохо даётся», ваши добытые трудом знания гораздо глубже, чем у тех, кому всё ясно с первого взгляда.  
+            </p>
+          </div>
+        </article>  
+      </section>
+      <section class="feynman">
+        <h2 class="feynman__title">Метод Фейнмана</h2>
+        <p class="feynman__subtitle">Выучить и не забыть.</p>
+        <a class="feynman__link opacity" href="#" target="_blank">Подробнее &rarr;</a>
+        <img class="feynman__background" src="./images/feynman.png" alt="Американский учёный Ричард Фейнман">
+      </section> 
       <section class="digits">
         <h2 class="section-title">Цифры и факты</h2>
         <p class="section-subtitle">Про учёбу и мозг</p>
@@ -77,12 +138,23 @@
           </div>
         </div>
       </section>
-      <section class="feynman">
-        <h2 class="feynman__title">Метод Фейнмана</h2>
-        <p class="feynman__subtitle">Выучить и не забыть.</p>
-        <a class="feynman__link" href="#" target="_blank">Подробнее &rarr;</a>
-        <img class="feynman__background" src="./images/feynman.png" alt="Американский учёный Ричард Фейнман">
-      </section> 
+      <section class="khan">
+        <div class="khan__container">
+          <p class="khan__author">Салман Хан</p>
+          <h2 class="khan__title">Весь мир – школа</h2>
+          <article class="khan__quote">
+            Страсть и новаторство Сала Хана меняют процесс обучения миллионов студентов по всему миру. 
+            Книгу «Весь мир — школа» нужно прочитать всем, кто занимается образованием — так учащиеся повсюду смогут получить навыки и знания, 
+            которые приносят успех в школе, карьере и жизни.  
+          </article>
+          <p class="khan__quote-author">Джордж Лукас</p>
+          <p class="khan__quote-author-subline">Кинорежиссер, продюсер</p>
+          <div class="khan__book-container">
+            <div class="khan__book-pic"></div>
+            <a class="khan__buy-link opacity" href="#" target="_blank">Купить книгу &rarr;</a>
+          </div>
+        </div>
+      </section>
       <section class="kaufman">
         <h2 class="section-title section-title_theme_dark">Принципы обучения</h2>
         <p class="section-subtitle section-subtitle_theme_dark">от Джоша Кауфмана</p>
@@ -128,7 +200,35 @@
             <p class="table__text table__text_theme_dark">Уделяйте внимание количеству и скорости.</p>
           </div>
         </div>
-        <div class="kaufman__triangle"></div>
+        <div class="kaufman__triangle rotation"></div>
+      </section>
+      <section class="resources">
+        <h2 class="section-title">Полезные ресурсы</h2>
+        <p class="section-subtitle">Больше материалов о техниках и лайфхаках обучения</p>
+        <div class="resources__logo-zone">
+          <ul class="resources__list">
+            <li>
+              <a class="resources__link" href="#">
+                <img class="resources__logo" src="./images/logo/resources-arzamas.svg" alt="Сайт Арзамас">
+              </a>
+            </li>
+            <li>
+              <a class="resources__link" href="#">
+                <img class="resources__logo" src="./images/logo/resources-n1.svg" alt="Сайт Эн плюс один">
+              </a>
+            </li>
+            <li>
+              <a class="resources__link" href="#">
+                <img class="resources__logo" src="./images/logo/resources-strelka.svg" alt="Сайт Стрелка">
+              </a>
+            </li>
+            <li>
+              <a class="resources__link" href="#">
+                <img class="resources__logo" src="./images/logo/resources-polka.svg" alt="Сайт Полка">
+              </a>
+            </li>
+          </ul>
+        </div>    
       </section>
     </main>
     <footer class="footer">
@@ -142,13 +242,13 @@
           <nav>
             <ul class="footer__column-links">
               <li>
-                <a href="#" class="footer__column-link" target="_blank">Главная</a>
+                <a href="#" class="footer__column-link opacity" target="_blank">Главная</a>
               </li>
               <li>
-                <a href="#" class="footer__column-link" target="_blank">Концепция</a>
+                <a href="#" class="footer__column-link opacity" target="_blank">Концепция</a>
               </li>
               <li>
-                <a href="#" class="footer__column-link" target="_blank">Наставники</a>
+                <a href="#" class="footer__column-link opacity" target="_blank">Наставники</a>
               </li>    
             </ul>
           </nav>
@@ -158,17 +258,17 @@
           <nav>
             <ul class="footer__column-links">
               <li>
-                <a href="https://www.youtube.com/" class="footer__column-link" target="_blank"> 
+                <a href="https://www.youtube.com/" class="footer__column-link opacity" target="_blank"> 
                   <img class="footer__social-icon" src="images/youtube-icon.svg" alt="Видеохостинг Ютуб">YouTube
                 </a>
               </li>
               <li>
-                <a href="https://vk.com/" class="footer__column-link" target="_blank">
+                <a href="https://vk.com/" class="footer__column-link opacity" target="_blank">
                   <img class="footer__social-icon" src="images/vk_color_white.svg" alt="Социальная сеть ВКонтакте">ВКонтакте
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/" class="footer__column-link" target="_blank">
+                <a href="https://www.tiktok.com/" class="footer__column-link opacity" target="_blank">
                   <img class="footer__social-icon" src="images/tiktok-icon.svg" alt="ТикТок">TikTok
                 </a>
               </li>    

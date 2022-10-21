@@ -1,0 +1,11 @@
+.video__iframes {
+  display: flex;
+  justify-content: center;
+  /*wrap - видео будет переноситься на другую строку, если ему не будет хватать места*/
+  flex-wrap: wrap;
+  margin: 0 auto;
+  /*gap - последнему элементу в строке не нужно придумывать отступ*/
+  gap: 20px;
+  padding-top: 50px;
+  margin-bottom: -50px;
+}

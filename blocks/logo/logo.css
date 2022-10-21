@@ -1,0 +1,8 @@
+/*Общие стили для logo_place_header и logo_place_footer*/
+.logo {
+  width: 228px;
+  height: 32px;
+  /*Чтобы логотип помещался в блок*/
+  background-size: cover;
+  z-index: 1;
+}

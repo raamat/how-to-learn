@@ -1,0 +1,9 @@
+.footer__columns {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  /*Распределяем элемменты по горизонтали с равными промежутками*/
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}

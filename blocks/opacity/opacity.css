@@ -1,0 +1,8 @@
+/*При наведении курсора ссылка становится полупрозрачной за 1 сек*/
+.opacity {
+  transition: opacity 1s;
+}
+
+.opacity:hover {
+  opacity: .5;
+}

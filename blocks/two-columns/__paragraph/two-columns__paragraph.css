@@ -1,0 +1,11 @@
+/*Убираем отступ после последнего абзаца за счет псевдокласса*/
+/*last-of-type находит последнего потомка с заданным тегом*/
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.two-columns__paragraph {
+  margin: 0;
+  padding-bottom: 30px;
+}

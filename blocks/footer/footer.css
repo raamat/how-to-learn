@@ -1,0 +1,11 @@
+.footer {
+  display: flex;
+  min-height: 350px;
+  /*Ниже показываем браузеру, что высота 350px относится к элементу полностью, включая padding*/
+  /*В противном случае футер будет 450px за счет верхнего и нижнего отступа*/
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
