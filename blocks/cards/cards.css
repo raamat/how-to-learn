@@ -1,4 +1,7 @@
 .cards {
+  /*Убираем стандартные стили у списка кроме margin (отступы заданы ниже)*/
+  padding: 0;
+  list-style-type: none;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;

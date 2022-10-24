@@ -2,4 +2,8 @@
   padding-top: 68px;
   display: flex;
   justify-content: start;
+  /*Cвойство align-items выравнивает flex-элементы текущей flex-линии таким же образом,
+  как и justify-content, но в перпендикулярном направлении. 
+  Используем для того, чтобы ссылка .khan__buy-link не занимала всю высоту блока*/
+  align-items: flex-start;
 }
