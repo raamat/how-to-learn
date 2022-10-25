@@ -20,7 +20,6 @@
 @import url(../blocks/rotation/rotation.css);
 @import url(../blocks/resources/resources.css);
 @import url(../blocks/opacity/opacity.css);
-@import url(../blocks/frameborder/frameborder.css);
 /****************** Элементы *******************/
 @import url(../blocks/header/__square-pic/header__square-pic.css);
 @import url(../blocks/header/__title/header__title.css);
